@@ -1,0 +1,16 @@
+//var color
+$btn-color:#942f86;
+$white:#fff;
+$round-color:#5e4d5c;
+$round-border:1px dashed #5e4d5c;
+$piclist-bg:#491442;
+$piclist-btn:#942f86;
+$qipao-bg:rgba(40, 29, 12, 0.15);
+$qipao-color:#2b182c;
+$qipao-color2:#756c5a;
+
+// var mixin
+
+@mixin transition($time){
+  transition: $time;
+}
