@@ -1,0 +1,32 @@
+@import "reset";
+
+body{
+  background: #333333;
+}
+/*.right-dots*/
+.right-dots{
+  padding: 25px;
+  position: fixed;
+  top:50%;
+  right:0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  li{
+    width: 10px;
+    height: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    cursor: pointer;
+    &:hover{
+      background: #fff;
+      transition: .2s;
+    }
+  }
+  li.active{
+    background: #ffffff;
+  }
+}

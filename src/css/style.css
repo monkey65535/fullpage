@@ -1,0 +1,134 @@
+/* reset */
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
+  margin: 0;
+  padding: 0;
+}
+
+header, footer, section, article, aside, nav, hgroup, address, figure, figcaption, menu, details {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th {
+  text-align: left;
+  font-weight: normal;
+}
+
+html, body, fieldset, img, iframe, abbr {
+  border: 0;
+}
+
+i, cite, em, var, address, dfn {
+  font-style: normal;
+}
+
+[hidefocus], summary {
+  outline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, small {
+  font-size: 100%;
+}
+
+sup, sub {
+  font-size: 83%;
+}
+
+pre, code, kbd, samp {
+  font-family: inherit;
+}
+
+q:before {
+  content: none;
+}
+q:after {
+  content: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: none;
+}
+
+label, summary {
+  cursor: default;
+}
+
+a, a:hover, button {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6, em, strong, b {
+  font-weight: bold;
+}
+
+del, ins, u, s, a, a:hover, a:hover {
+  text-decoration: none;
+}
+
+body, textarea, input, button, select, keygen, legend {
+  font: 12px/1.14 arial, \5b8b\4f53;
+  color: #333;
+  outline: 0;
+}
+
+body {
+  background: #fff;
+}
+
+a, a:hover {
+  color: #333;
+}
+
+.clear-fix {
+  zoom: 1;
+}
+.clear-fix:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+body {
+  background: #333333;
+}
+
+/*.right-dots*/
+.right-dots {
+  padding: 25px;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.right-dots li {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.right-dots li:hover {
+  background: #fff;
+  transition: .2s;
+}
+.right-dots li.active {
+  background: #ffffff;
+}
+
+/*# sourceMappingURL=style.css.map */
