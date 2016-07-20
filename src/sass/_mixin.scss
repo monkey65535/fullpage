@@ -14,3 +14,30 @@ $qipao-color2:#756c5a;
 @mixin transition($time){
   transition: $time;
 }
+
+@mixin stepAni($ani-name,$time,$step){
+  animation: $ani-name $time steps($step) infinite;
+}
+
+@mixin moveAni($end-Px){
+    0%{
+      background-position: 0 0;
+    }
+    100%{
+      background-position: $end-Px 0 ;
+    }
+}
+@mixin text-center($width,$height,$line){
+  width: $width;
+  height: $height;
+  line-height: $line;
+  text-align: center;
+}
+@mixin centerX(){
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
