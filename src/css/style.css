@@ -166,7 +166,7 @@ html, body { width: 100%; height: 100%; }
 
 .bg-stars { background: url("../img/contact_cont_bg.jpg") no-repeat center center; width: 1600px; height: 886px; position: absolute; top: 0; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); }
 
-.moon-ship { background: url("../img/contact_sprite.png"); width: 349px; height: 494px; animation: move-moon 1.2s steps(15) infinite; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 3; }
+.moon-ship { background: url("../img/contact_sprite.png"); width: 343px; height: 494px; animation: move-moon 1.2s steps(15) infinite; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 3; }
 
 .moon-info { margin-top: 10%; float: left; position: relative; left: 5%; z-index: 3; width: 360px; }
 .moon-info h2 { font-size: 24px; }

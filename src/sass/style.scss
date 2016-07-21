@@ -543,7 +543,7 @@ html, body {
 
 .moon-ship {
   background: url("../img/contact_sprite.png");
-  width: 349px;
+  width: 343px;
   height: 494px;
   @include stepAni(move-moon, 1.2s, 15);
   position: absolute;
