@@ -24,7 +24,7 @@ $qipao-color2:#756c5a;
       background-position: 0 0;
     }
     100%{
-      background-position: $end-Px 0 ;
+      background-position: $end-Px 0;
     }
 }
 @mixin text-center($width,$height,$line){
@@ -40,4 +40,10 @@ $qipao-color2:#756c5a;
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+@mixin qipaosanjiao(){
+  width: 0;
+  height: 0;
+  border-top: 20px solid rgba(40, 29, 12, 0.15);
+  border-left: 20px solid transparent;
 }

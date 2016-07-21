@@ -107,6 +107,7 @@ html, body { width: 100%; height: 100%; }
 .slide-3 .left-tips { left: 15%; }
 .slide-3 .right-tips { right: 20%; }
 
+/*s4*/
 .slide-4 { height: auto; background: url("../img/work_bg.jpg"); }
 
 /*s4-icon-nav*/
@@ -118,17 +119,67 @@ html, body { width: 100%; height: 100%; }
 .s4-nav .icon-ai { display: block; position: absolute; bottom: 5%; right: 4%; }
 
 /*selected-work*/
-.selected-work { width: 97%; margin: 10px auto 100px auto; }
-.selected-work h2 { font-size: 24px; text-align: center; }
+.selected-work { width: 97%; margin: 10px auto 6% auto; }
+.selected-work h2 { font-size: 24px; text-align: center; color: #fff; }
+
+/*work-nav*/
+.work-nav { margin-top: 30px; text-align: center; }
+.work-nav a { color: #fff; display: inline-block; margin: 0 15px; font-size: 14px; line-height: 24px; box-sizing: border-box; position: relative; }
+.work-nav a span { display: none; height: 1px; background: #fff; }
+.work-nav a.act span { display: block; width: 100%; }
+.work-nav a:hover span { display: block; width: 100%; }
+
+/*work-list*/
+.work-list { margin-top: 38px; }
+.work-list li { width: 23.3%; margin: 0.3% 0 0.3% 0.6%; border: 3px solid #fff; border-radius: 2px; position: relative; float: left; overflow: hidden; }
+.work-list li img { vertical-align: middle; width: 100%; position: relative; z-index: 2; }
+.work-list li .list-info { position: absolute; width: 100%; top: 0; left: 0; bottom: 0; right: 0; background: #491442; text-align: center; z-index: 1; }
+.work-list li .list-info h3 { font-size: 20px; margin-top: 20%; }
+.work-list li .list-info a { display: block; width: 170px; height: 30px; line-height: 30px; text-align: center; border: 2px solid #fff; margin: 10% auto 0 auto; border-radius: 2px; color: #fff; font-size: 14px; }
+.work-list li .list-info a:hover { background: #942f86; }
+
+/*more-button*/
+.more-button { width: 100%; margin: 0 auto; padding-top: 3%; text-align: center; }
+.more-button a { border: 2px solid #fff; padding: 8px 18px; margin: 20px auto 0 auto; color: #fff; font-size: 16px; display: inline-block; }
+.more-button a:hover { background: #942f86; transition: 0.5s; }
 
 .slide-5 { background: url("../img/med2_bg.jpg"); }
 
+/*ari-balloon*/
+.ari-balloon { width: 1163px; height: 955px; background: url("../img/air_balloon.png") no-repeat center center; position: absolute; top: -300px; left: 0; z-index: 8; }
+
+/*bg-cloud*/
+.bg-cloud { background: url("../img/med2_cont_bg.jpg") no-repeat center center; position: absolute; width: 1494px; height: 694px; top: 0; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); }
+
+/*talk-bubble*/
+.talk-bubble { width: 350px; float: right; margin-top: 12%; position: relative; z-index: 9; }
+.talk-bubble li { position: relative; margin-bottom: 40px; }
+.talk-bubble li .bubble-left { position: absolute; left: -47px; }
+.talk-bubble li .bubble-left img { float: left; margin-top: -8px; margin-right: 8px; }
+.talk-bubble li .bubble-left .bubble-san { display: inline-block; width: 0; height: 0; border-top: 20px solid rgba(40, 29, 12, 0.15); border-left: 20px solid transparent; vertical-align: middle; }
+.talk-bubble li .bubble-info { background: rgba(40, 29, 12, 0.15); padding: 20px; }
+.talk-bubble li .bubble-info h6 { color: #2b182c; border-bottom: 1px solid #b5a991; padding-bottom: 10px; margin-bottom: 10px; line-height: 20px; font-weight: normal; }
+.talk-bubble li .bubble-info a { display: block; color: #756c5a; }
+.talk-bubble li .bubble-info a:hover { color: #2b182c; }
+
 .slide-6 { background: url("../img/contact_bg.jpg"); }
+
+.bg-stars { background: url("../img/contact_cont_bg.jpg") no-repeat center center; width: 1600px; height: 886px; position: absolute; top: 0; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); }
+
+.moon-ship { background: url("../img/contact_sprite.png"); width: 349px; height: 494px; animation: move-moon 1.2s steps(15) infinite; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 3; }
+
+.moon-info { margin-top: 10%; float: left; position: relative; left: 5%; z-index: 3; width: 360px; }
+.moon-info h2 { font-size: 24px; }
+.moon-info p { margin-top: 20px; line-height: 20px; font-size: 14px; }
+.moon-info a { display: block; float: right; color: #fff; padding: 8px 18px; border: 2px solid #fff; margin-top: 16px; }
+.moon-info a:hover { background: #942f86; }
 
 /*animation*/
 @keyframes move { 0% { background-position: 0 0; }
   100% { background-position: -7140px 0; } }
 @keyframes move2 { 0% { background-position: 0 0; }
   100% { background-position: -4050px 0; } }
+@keyframes move-moon { 0% { background-position: 0 0; }
+  100% { background-position: -5144px 0; } }
 
 /*# sourceMappingURL=style.css.map */

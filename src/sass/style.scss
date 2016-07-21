@@ -306,6 +306,7 @@ html, body {
   }
 }
 
+/*s4*/
 .slide-4 {
   height: auto;
   background: url("../img/work_bg.jpg");
@@ -349,10 +350,110 @@ html, body {
 /*selected-work*/
 .selected-work {
   width: 97%;
-  margin: 10px auto 100px auto;
-  h2{
+  margin: 10px auto 6% auto;
+  h2 {
     font-size: 24px;
     text-align: center;
+    color: $white;
+  }
+}
+
+/*work-nav*/
+.work-nav {
+  margin-top: 30px;
+  text-align: center;
+  a {
+    color: $white;
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 14px;
+    line-height: 24px;
+    box-sizing: border-box;
+    position: relative;
+    span {
+      display: none;
+      height: 1px;
+      background: $white;
+    }
+    &.act {
+      span {
+        display: block;
+        width: 100%;
+      }
+    }
+    &:hover {
+      span {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+/*work-list*/
+.work-list {
+  margin-top: 38px;
+  li {
+    width: 23.3%;
+    margin: 0.3% 0 0.3% 0.6%;
+    border: 3px solid $white;
+    border-radius: 2px;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    img {
+      vertical-align: middle;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    .list-info {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: $piclist-bg;
+      text-align: center;
+      z-index: 1;
+      h3 {
+        font-size: 20px;
+        margin-top: 20%;
+      }
+      a {
+        display: block;
+        @include text-center(170px, 30px, 30px);
+        border: 2px solid $white;
+        margin: 10% auto 0 auto;
+        border-radius: 2px;
+        color: $white;
+        font-size: 14px;
+        &:hover {
+          background: $btn-color;
+        }
+      }
+    }
+  }
+}
+
+/*more-button*/
+.more-button {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 3%;
+  text-align: center;
+  a {
+    border: 2px solid $white;
+    padding: 8px 18px;
+    margin: 20px auto 0 auto;
+    color: $white;
+    font-size: 16px;
+    display: inline-block;
+    &:hover {
+      background: $btn-color;
+      @include transition(.5s);
+    }
   }
 }
 
@@ -360,8 +461,127 @@ html, body {
   background: url("../img/med2_bg.jpg");
 }
 
+/*ari-balloon*/
+.ari-balloon {
+  width: 1163px;
+  height: 955px;
+  background: url("../img/air_balloon.png") no-repeat center center;
+  position: absolute;
+  top: -300px;
+  left: 0;
+  z-index: 8;
+}
+
+/*bg-cloud*/
+.bg-cloud {
+  background: url("../img/med2_cont_bg.jpg") no-repeat center center;
+  position: absolute;
+  width: 1494px;
+  height: 694px;
+  top: 0;
+  @include centerX();
+}
+
+/*talk-bubble*/
+.talk-bubble {
+  width: 350px;
+  float: right;
+  margin-top: 12%;
+  position: relative;
+  z-index: 9;
+  li {
+    position: relative;
+    margin-bottom: 40px;
+    .bubble-left {
+      position: absolute;
+      left: -47px;
+      img {
+        float: left;
+        margin-top: -8px;
+        margin-right: 8px;
+      }
+      .bubble-san {
+        display: inline-block;
+        @include qipaosanjiao();
+        vertical-align: middle;
+      }
+    }
+    .bubble-info {
+      background: $qipao-bg;
+      padding: 20px;
+      h6 {
+        color: $qipao-color;
+        border-bottom: 1px solid #b5a991;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        line-height: 20px;
+        font-weight: normal;
+      }
+      a {
+        display: block;
+        color: $qipao-color2;
+        &:hover {
+          color: $qipao-color;
+        }
+      }
+    }
+  }
+}
+
 .slide-6 {
   background: url("../img/contact_bg.jpg");
+}
+
+.bg-stars {
+  background: url("../img/contact_cont_bg.jpg") no-repeat center center;
+  width: 1600px;
+  height: 886px;
+  position: absolute;
+  top: 0;
+  @include centerX();
+}
+
+.moon-ship {
+  background: url("../img/contact_sprite.png");
+  width: 349px;
+  height: 494px;
+  @include stepAni(move-moon, 1.2s, 15);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+.moon-info{
+  margin-top: 10%;
+  float: left;
+  position: relative;
+  left: 5%;
+  z-index: 3;
+  width: 360px;
+  h2{
+    font-size: 24px;
+  }
+  p{
+    margin-top: 20px;
+    line-height: 20px;
+    font-size: 14px;
+  }
+  a{
+    display: block;
+    float: right;
+    color: $white;
+    padding: 8px 18px;
+    border: 2px solid $white;
+    margin-top: 16px;
+    &:hover{
+      background: $btn-color;
+    }
+  }
 }
 
 /*animation*/
@@ -370,5 +590,8 @@ html, body {
 }
 
 @keyframes move2 {
-  @include moveAni(-4050px)
+  @include moveAni(-4050px);
+}
+@keyframes move-moon {
+  @include moveAni(-5144px);
 }
