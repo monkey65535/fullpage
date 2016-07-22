@@ -1,0 +1,23 @@
+{
+  "name": "fullpage",
+  "version": "1.0.0",
+  "description": "一个全屏视差效果页面\r 目前进度-静态页面完成\r 继续研究gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monkey65535/fullpage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monkey65535/fullpage/issues"
+  },
+  "homepage": "https://github.com/monkey65535/fullpage#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
