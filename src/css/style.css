@@ -37,7 +37,6 @@ pre, code, kbd, samp {
 
 q:before {
   content: none; }
-
 q:after {
   content: none; }
 
@@ -492,11 +491,7 @@ html, body {
   height: 694px;
   top: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%); }
+  margin-left: -747px; }
 
 /*talk-bubble*/
 .talk-bubble {
@@ -548,11 +543,7 @@ html, body {
   position: absolute;
   top: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%); }
+  margin-left: -800px; }
 
 .moon-ship {
   background: url("../img/contact_sprite.png");
@@ -562,11 +553,8 @@ html, body {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  margin-top: -274px;
+  margin-left: -171.5px;
   z-index: 3; }
 
 .moon-info {
@@ -598,13 +586,11 @@ html, body {
     background-position: 0 0; }
   100% {
     background-position: -7140px 0; } }
-
 @keyframes move2 {
   0% {
     background-position: 0 0; }
   100% {
     background-position: -4050px 0; } }
-
 @keyframes move-moon {
   0% {
     background-position: 0 0; }

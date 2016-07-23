@@ -479,7 +479,8 @@ html, body {
   width: 1494px;
   height: 694px;
   top: 0;
-  @include centerX();
+  left: 50%;
+  margin-left:-747px;
 }
 
 /*talk-bubble*/
@@ -538,7 +539,8 @@ html, body {
   height: 886px;
   position: absolute;
   top: 0;
-  @include centerX();
+  left: 50%;
+  margin-left: -800px;
 }
 
 .moon-ship {
@@ -549,11 +551,8 @@ html, body {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  margin-top: -274px;
+  margin-left: -171.5px;
   z-index: 3;
 }
 .moon-info{
