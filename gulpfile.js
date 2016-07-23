@@ -16,10 +16,5 @@ gulp.task('watch',function () {
 
 
 gulp.task('default',function () {
-    console.log("ok");
-    /*gulp.run('sass');
-    //实时监听
-    gulp.watch('src/sass/!*.scss',function () {
-        gulp.run('sass');
-    });*/
+    //gulp.run('watch');
 });
