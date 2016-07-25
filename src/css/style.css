@@ -126,6 +126,7 @@ html, body {
 /*silde-1*/
 .slide-1 {
   background: url("../img/home_bg.jpg");
+  z-index: 1;
   /*s1-left*/
   /*s1-right*/ }
   .slide-1 .center-bg {
@@ -200,13 +201,14 @@ html, body {
 
 /*s2-left*/
 .left-text {
-  width: 50%;
+  /*width: 50%;*/
   margin-top: 4%;
   margin-left: 15%;
   float: left; }
   .left-text li .round {
-    width: 60px;
-    height: 60px;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
     line-height: 60px;
     text-align: center;
     background: #5e4d5c;
@@ -216,8 +218,9 @@ html, body {
     float: left; }
   .left-text li .work-his {
     float: left;
-    margin-left: 30px; }
+    margin-left: 50px; }
     .left-text li .work-his .text {
+      opacity: 0;
       font-size: 18px;
       color: #5e4d5c;
       width: 220px;
@@ -226,21 +229,25 @@ html, body {
       text-align: center;
       word-break: normal; }
     .left-text li .work-his .tips {
+      opacity: 0;
       width: 220px;
       height: 28px;
       line-height: 28px;
       text-align: center;
       font-size: 12px;
       margin-top: 15px; }
-  .left-text .left-line {
-    width: 31.5%;
-    height: 60px;
-    margin-bottom: 10px;
-    border-right: 1px dashed #5e4d5c; }
+  .left-text li span {
+    float: left;
+    display: block;
+    width: 62.5%;
+    height: 0;
+    margin: 5px 0;
+    border-right: 1px dashed #5e4d5c;
+    opacity: 1; }
 
 /*s2-right*/
 .right-pic {
-  position: absolute;
+  position: fixed;
   top: 20%;
   right: 27%; }
   .right-pic .animate {
@@ -306,7 +313,8 @@ html, body {
     position: absolute;
     width: 410px;
     z-index: 3;
-    text-align: left; }
+    text-align: left;
+    transition: 1s; }
     .slide-3 .left-text h2, .slide-3 .right-text h2 {
       font-size: 24px; }
       .slide-3 .left-text h2 img, .slide-3 .right-text h2 img {
@@ -330,19 +338,29 @@ html, body {
       float: left;
       margin-right: 10px; }
   .slide-3 .left-text {
-    left: 0;
-    bottom: 250px; }
+    left: 0; }
   .slide-3 .right-text {
-    right: 0;
-    bottom: 250px; }
+    right: 0; }
+  .slide-3 .show {
+    bottom: 310px;
+    opacity: 1; }
+  .slide-3 .hide {
+    bottom: 250px;
+    opacity: 0; }
   .slide-3 .left-tips, .slide-3 .right-tips {
     position: absolute;
     z-index: 2;
-    bottom: 150px; }
+    transition: 1s; }
   .slide-3 .left-tips {
     left: 15%; }
   .slide-3 .right-tips {
     right: 20%; }
+  .slide-3 .hide-tips {
+    bottom: 100px;
+    opacity: 0; }
+  .slide-3 .show-tips {
+    bottom: 150px;
+    opacity: 1; }
 
 /*s4*/
 .slide-4 {
@@ -351,13 +369,16 @@ html, body {
 
 /*s4-icon-nav*/
 .s4-nav {
+  height: 284px;
   padding: 40px;
   position: relative; }
   .s4-nav li {
     width: 18%;
     padding: 1%;
+    margin-top: 10px;
     text-align: center;
-    float: left; }
+    float: left;
+    opacity: 0; }
     .s4-nav li h2 {
       font-size: 20px;
       margin-top: 20px;
@@ -372,11 +393,6 @@ html, body {
       background: #fff;
       display: block;
       margin: 25px auto 0 auto; }
-  .s4-nav .icon-ai {
-    display: block;
-    position: absolute;
-    bottom: 5%;
-    right: 4%; }
 
 /*selected-work*/
 .selected-work {

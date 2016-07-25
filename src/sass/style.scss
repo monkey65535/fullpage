@@ -61,6 +61,7 @@ html, body {
 /*silde-1*/
 .slide-1 {
   background: url("../img/home_bg.jpg");
+  z-index: 1;
   .center-bg {
     float: left;
     position: absolute;
@@ -152,13 +153,14 @@ html, body {
 
 /*s2-left*/
 .left-text {
-  width: 50%;
+  /*width: 50%;*/
   margin-top: 4%;
   margin-left: 15%;
   float: left;
   li {
     .round {
-      @include text-center(60px, 60px, 60px);
+      opacity: 0;
+      @include text-center(0px, 0px, 60px);
       background: $round-color;
       border-radius: 50%;
       color: $white;
@@ -167,31 +169,36 @@ html, body {
     }
     .work-his {
       float: left;
-      margin-left: 30px;
+      margin-left: 50px;
       .text {
+        opacity: 0;
         font-size: 18px;
         color: $round-color;
         @include text-center(220px, 60px, 24px);
         word-break: normal;
       }
       .tips {
+        opacity: 0;
         @include text-center(220px, 28px, 28px);
         font-size: 12px;
         margin-top: 15px;
       }
     }
-  }
-  .left-line {
-    width: 31.5%;
-    height: 60px;
-    margin-bottom: 10px;
-    border-right: $round-border;
+    span{
+      float: left;
+      display: block;
+      width:62.5%;
+      height: 0;
+      margin:5px 0;
+      border-right: $round-border;
+      opacity: 1;
+    }
   }
 }
 
 /*s2-right*/
 .right-pic {
-  position: absolute;
+  position: fixed;
   top: 20%;
   right: 27%;
   .animate {
@@ -253,6 +260,7 @@ html, body {
     width: 410px;
     z-index: 3;
     text-align: left;
+    transition:1s;
     h2 {
       font-size: 24px;
       img {
@@ -283,26 +291,40 @@ html, body {
       }
     }
   }
-  .left-text {
+  .left-text{
     left: 0;
-    bottom: 250px;
   }
-  .right-text {
+  .right-text{
     right: 0;
+  }
+  .show {
+    bottom: 310px;
+    opacity: 1;
+  }
+  .hide {
     bottom: 250px;
+    opacity: 0;
   }
 
   /*s3-tips*/
   .left-tips, .right-tips {
     position: absolute;
     z-index: 2;
-    bottom: 150px;
+    transition:1s;
   }
-  .left-tips {
+  .left-tips{
     left: 15%;
   }
-  .right-tips {
+  .right-tips{
     right: 20%;
+  }
+  .hide-tips {
+    bottom: 100px;
+    opacity: 0;
+  }
+  .show-tips {
+    bottom: 150px;
+    opacity: 1;
   }
 }
 
@@ -314,13 +336,16 @@ html, body {
 
 /*s4-icon-nav*/
 .s4-nav {
+  height: 284px;
   padding: 40px;
   position: relative;
   li {
     width: 18%;
     padding: 1%;
+    margin-top: 10px;
     text-align: center;
     float: left;
+    opacity: 0;
     h2 {
       font-size: 20px;
       margin-top: 20px;
@@ -338,12 +363,6 @@ html, body {
       display: block;
       margin: 25px auto 0 auto;
     }
-  }
-  .icon-ai {
-    display: block;
-    position: absolute;
-    bottom: 5%;
-    right: 4%;
   }
 }
 
