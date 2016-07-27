@@ -153,11 +153,12 @@ html, body {
 
 /*s2-left*/
 .left-text {
-  /*width: 50%;*/
+  width: 50%;
   margin-top: 4%;
   margin-left: 15%;
   float: left;
   li {
+    width: 350px;
     .round {
       opacity: 0;
       @include text-center(0px, 0px, 60px);
@@ -184,14 +185,17 @@ html, body {
         margin-top: 15px;
       }
     }
-    span{
+    .line{
+      width: 350px;
       float: left;
-      display: block;
-      width:62.5%;
-      height: 0;
-      margin:5px 0;
-      border-right: $round-border;
-      opacity: 1;
+      span{
+        display: block;
+        width: 2px;
+        height: 0;
+        margin:5px 0 5px 60%;
+        border-right: $round-border;
+        opacity: 1;
+      }
     }
   }
 }
@@ -422,6 +426,7 @@ html, body {
       background: $piclist-bg;
       text-align: center;
       z-index: 1;
+      color: $white;
       h3 {
         font-size: 20px;
         margin-top: 20%;

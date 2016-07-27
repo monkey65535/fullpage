@@ -201,49 +201,53 @@ html, body {
 
 /*s2-left*/
 .left-text {
-  /*width: 50%;*/
+  width: 50%;
   margin-top: 4%;
   margin-left: 15%;
   float: left; }
-  .left-text li .round {
-    opacity: 0;
-    width: 0px;
-    height: 0px;
-    line-height: 60px;
-    text-align: center;
-    background: #5e4d5c;
-    border-radius: 50%;
-    color: #fff;
-    font-size: 18px;
-    float: left; }
-  .left-text li .work-his {
-    float: left;
-    margin-left: 50px; }
-    .left-text li .work-his .text {
+  .left-text li {
+    width: 350px; }
+    .left-text li .round {
       opacity: 0;
+      width: 0px;
+      height: 0px;
+      line-height: 60px;
+      text-align: center;
+      background: #5e4d5c;
+      border-radius: 50%;
+      color: #fff;
       font-size: 18px;
-      color: #5e4d5c;
-      width: 220px;
-      height: 60px;
-      line-height: 24px;
-      text-align: center;
-      word-break: normal; }
-    .left-text li .work-his .tips {
-      opacity: 0;
-      width: 220px;
-      height: 28px;
-      line-height: 28px;
-      text-align: center;
-      font-size: 12px;
-      margin-top: 15px; }
-  .left-text li span {
-    float: left;
-    display: block;
-    width: 62.5%;
-    height: 0;
-    margin: 5px 0;
-    border-right: 1px dashed #5e4d5c;
-    opacity: 1; }
+      float: left; }
+    .left-text li .work-his {
+      float: left;
+      margin-left: 50px; }
+      .left-text li .work-his .text {
+        opacity: 0;
+        font-size: 18px;
+        color: #5e4d5c;
+        width: 220px;
+        height: 60px;
+        line-height: 24px;
+        text-align: center;
+        word-break: normal; }
+      .left-text li .work-his .tips {
+        opacity: 0;
+        width: 220px;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+        font-size: 12px;
+        margin-top: 15px; }
+    .left-text li .line {
+      width: 350px;
+      float: left; }
+      .left-text li .line span {
+        display: block;
+        width: 2px;
+        height: 0;
+        margin: 5px 0 5px 60%;
+        border-right: 1px dashed #5e4d5c;
+        opacity: 1; }
 
 /*s2-right*/
 .right-pic {
@@ -446,7 +450,8 @@ html, body {
       right: 0;
       background: #491442;
       text-align: center;
-      z-index: 1; }
+      z-index: 1;
+      color: #fff; }
       .work-list li .list-info h3 {
         font-size: 20px;
         margin-top: 20%; }
