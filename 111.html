@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit">
+	<meta name="force-rendering" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<title>Title</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.se {
+			position: relative;
+			width: 100%;
+		}
+
+		.se1 {
+			height: 800px;
+			background: red;
+		}
+
+		.se2 {
+			height: 800px;
+			background: burlywood;
+		}
+
+		.se3 {
+			height: 1400px;
+			background: skyblue;
+		}
+
+		.se4 {
+			height: 800px;
+			background: blanchedalmond;
+		}
+
+		.se5 {
+			height: 1200px;
+			background: darkkhaki;
+		}
+
+		ul {
+			width: 20px;
+			position: fixed;
+			right: 10px;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+
+		ul li {
+			width: 10px;
+			height: 10px;
+			margin-bottom: 20px;
+			border-radius: 50%;
+			border: 2px solid #fff;
+		}
+
+		ul li.act {
+			background: #ffffff;
+		}
+	</style>
+</head>
+<body>
+<div class="se se1"></div>
+<div class="se se2"></div>
+<div class="se se3"></div>
+<div class="se se4"></div>
+<div class="se se5"></div>
+<ul>
+	<li class="act"></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+<script>
+	window.onload = function () {
+		var ses = document.querySelectorAll(".se");
+		var dotUl = document.querySelector("ul");
+		var dots = dotUl.querySelectorAll("li");
+
+		var dotArr = [];
+		for (var i = 0; i < ses.length; i++) {
+			dotArr.push(ses[i].offsetTop);
+		}
+		window.onscroll = function () {
+			var scrollMove = document.body.scrollTop;
+			//把这个数字与数组中的内容做对比
+			for (var i = 0; i < dotArr.length; i++) {
+				if (scrollMove >= dotArr[i] && scrollMove < dotArr[i + 1]) {
+					//这个时候第i个dots为act
+					for (var j = 0; j < dots.length; j++) {
+						dots[j].className = "";
+					}
+					console.log(dotArr[i + 1],scrollMove);
+					dots[i].className = "act";
+				}
+			}
+		}
+	};
+</script>
+</body>
+</html>

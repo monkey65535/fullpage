@@ -310,7 +310,7 @@ html, body {
   .left-tips, .right-tips {
     position: absolute;
     z-index: 2;
-    transition:1s;
+    transition:.5s;
   }
   .left-tips{
     left: 15%;
@@ -325,6 +325,9 @@ html, body {
   .show-tips {
     bottom: 150px;
     opacity: 1;
+    transform: translateY(0);
+    -webkit-animation:show-tips 1s ease-in infinite alternate;
+    animation:show-tips 1s ease-in infinite alternate;
   }
 }
 
@@ -346,6 +349,7 @@ html, body {
     text-align: center;
     float: left;
     opacity: 0;
+    cursor: pointer;
     h2 {
       font-size: 20px;
       margin-top: 20px;
@@ -377,44 +381,25 @@ html, body {
   }
 }
 
-/*work-nav*/
-.work-nav {
-  margin-top: 30px;
-  text-align: center;
-  a {
-    color: $white;
-    display: inline-block;
-    margin: 0 15px;
-    font-size: 14px;
-    line-height: 24px;
-    box-sizing: border-box;
-    position: relative;
-    span {
-      display: none;
-      height: 1px;
-      background: $white;
-    }
-    &.act {
-      span {
-        display: block;
-        width: 100%;
-      }
-    }
-    &:hover {
-      span {
-        display: block;
-        width: 100%;
-      }
-    }
-  }
-}
-
 /*work-list*/
+.work-tabs{
+  max-width: 1200px;
+  min-height: 250px;
+  position: relative;
+  margin: 38px auto 0 auto;
+  overflow: hidden;
+}
 .work-list {
-  margin-top: 38px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
   li {
-    width: 23.3%;
-    margin: 0.3% 0 0.3% 0.6%;
+    width: 310px;
+    height: 218px;
+    margin: 0.3% 0.6% 0.3% 0;
     border: 3px solid $white;
     border-radius: 2px;
     position: relative;
@@ -425,6 +410,7 @@ html, body {
       width: 100%;
       position: relative;
       z-index: 2;
+      display: block;
     }
     .list-info {
       position: absolute;
@@ -455,6 +441,31 @@ html, body {
     }
   }
 }
+/*scroll-bar*/
+#scroll-box{
+  width: 100%;
+  height: 14px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#scroll-bar{
+  width: 100%;
+  height: 14px;
+  border-radius: 10px;
+  background: #eee;
+  position: relative;
+}
+#scroll-block{
+  display: block;
+  width: 150px;
+  height: 10px;
+  border-radius: 10px;
+  position: absolute;
+  background: #C7C348;
+  top: 2px;
+  left: 2px;
+}
 
 /*more-button*/
 .more-button {
@@ -475,79 +486,7 @@ html, body {
     }
   }
 }
-
-.slide-5 {
-  background: url("../img/med2_bg.jpg");
-}
-
-/*ari-balloon*/
-.ari-balloon {
-  width: 1163px;
-  height: 955px;
-  background: url("../img/air_balloon.png") no-repeat center center;
-  position: absolute;
-  top: -300px;
-  left: 0;
-  z-index: 8;
-}
-
-/*bg-cloud*/
-.bg-cloud {
-  background: url("../img/med2_cont_bg.jpg") no-repeat center center;
-  position: absolute;
-  width: 1494px;
-  height: 694px;
-  top: 0;
-  left: 50%;
-  margin-left:-747px;
-}
-
-/*talk-bubble*/
-.talk-bubble {
-  width: 350px;
-  float: right;
-  margin-top: 12%;
-  position: relative;
-  z-index: 9;
-  li {
-    position: relative;
-    margin-bottom: 40px;
-    .bubble-left {
-      position: absolute;
-      left: -47px;
-      img {
-        float: left;
-        margin-top: -8px;
-        margin-right: 8px;
-      }
-      .bubble-san {
-        display: inline-block;
-        @include qipaosanjiao();
-        vertical-align: middle;
-      }
-    }
-    .bubble-info {
-      background: $qipao-bg;
-      padding: 20px;
-      h6 {
-        color: $qipao-color;
-        border-bottom: 1px solid #b5a991;
-        padding-bottom: 10px;
-        margin-bottom: 10px;
-        line-height: 20px;
-        font-weight: normal;
-      }
-      a {
-        display: block;
-        color: $qipao-color2;
-        &:hover {
-          color: $qipao-color;
-        }
-      }
-    }
-  }
-}
-
+/*slide-6*/
 .slide-6 {
   background: url("../img/contact_bg.jpg");
 }
@@ -612,4 +551,20 @@ html, body {
 }
 @keyframes move-moon {
   @include moveAni(-5145px);
+}
+@keyframes show-tips {
+  from{
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to{
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
 }
