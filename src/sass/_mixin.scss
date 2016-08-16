@@ -1,0 +1,49 @@
+//var color
+$btn-color:#942f86;
+$white:#fff;
+$round-color:#5e4d5c;
+$round-border:1px dashed #5e4d5c;
+$piclist-bg:#491442;
+$piclist-btn:#942f86;
+$qipao-bg:rgba(40, 29, 12, 0.15);
+$qipao-color:#2b182c;
+$qipao-color2:#756c5a;
+
+// var mixin
+
+@mixin transition($time){
+  transition: $time;
+}
+
+@mixin stepAni($ani-name,$time,$step){
+  animation: $ani-name $time steps($step) infinite;
+}
+
+@mixin moveAni($end-Px){
+    0%{
+      background-position: 0 0;
+    }
+    100%{
+      background-position: $end-Px 0;
+    }
+}
+@mixin text-center($width,$height,$line){
+  width: $width;
+  height: $height;
+  line-height: $line;
+  text-align: center;
+}
+@mixin centerX(){
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+@mixin qipaosanjiao(){
+  width: 0;
+  height: 0;
+  border-top: 20px solid rgba(40, 29, 12, 0.15);
+  border-left: 20px solid transparent;
+}
